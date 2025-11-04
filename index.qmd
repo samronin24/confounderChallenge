@@ -9,43 +9,6 @@ execute:
   eval: true
 ---
 
-:::: {.callout-important}
-## 📋 The Challenge: Recover the Lost Figures!
-
-A critical report on confounding and causal inference was being prepared when disaster struck—the figures were lost! The data files survived (`patients_data.csv` and `patients_data_randomized.csv`), and the narrative text is intact, but **all three key visualizations have disappeared**.
-
-Your mission: **Recover the lost figures** by reading the narrative carefully and creating compelling visualizations that match the story being told. The figures must be:
-
-- **Figure 1**: Post-surgical outcomes by patient (observational data)
-- **Figure 2**: Post-surgical outcomes for randomized patients  
-- **Figure 3**: Post-surgical outcomes by patient severity (stratification)
-
-Use the text descriptions, statistical results, and your understanding of visualization best practices to recreate these figures. Your figures should be professional, colorblind-friendly, and tell the story clearly.
-
-**Grading:** Completing the three figures correctly will earn you 85% of the grade. To earn the final 15% (for a total of 100%), you must make it feel like a complete, professional report rather than a challenge assignment
-::::
-
-:::: {.callout-warning}
-## ⚠️ AI Partnership Required
-Use Cursor AI for speed, but ensure you understand and can explain your visualizations in your own words. The goal is to create figures that match the narrative and statistical insights described in the text.
-::::
-
-## The Paradox: Who *Really* Is the Better Surgeon?
-
-::: {.callout-tip title="A Tale of Two Surgeons" icon=false}
-*Paraphrased from* [@taleb2017surgeons]
-
-<div style="float: right; margin-left: 15px; margin-bottom: 10px;">
-<img src="docSideBySide.jpg" alt="Doc Dreamy and Doc Duck side by side" style="max-width: 250px; height: auto; border-radius: 5px;">
-</div>
-
-Imagine you need to choose between two surgeons of similar rank at the same hospital. The first surgeon, Doc Dreamy, matches our stereotype perfectly: refined appearance, silver-rimmed glasses, delicate hands, measured speech, and an office adorned with Ivy League diplomas (see the image). The second surgeon, Doc Duck, by contrast, looks more like a butcher—overweight, with large hands, an unkempt appearance, and no visible credentials on the wall.
-
-Counterintuitively, the surgeon who doesn't "look the part" may actually be the better choice. Why? Because when someone succeeds in their profession despite not fitting the expected appearance, it suggests they had to overcome significant perceptual biases. And if we are lucky enough to have people who do not look the part, it is thanks to the presence of some skin in the game, the contact with reality that filters out incompetence. [@taleb2017surgeons]
-:::
-
-## Observational Data: A Misleading Victory for Doc Dreamy
-
 ```{python}
 #| label: simulate-data
 #| echo: false
@@ -112,7 +75,6 @@ print(f"Number of patients: {len(patients_df)}")
 patients_df.head()
 ```
 
-Let's use data to figure out which surgeon performs better. @fig-plot-outcomes shows the post-surgical symptom score for 100 patients. Doc Duck's average post-surgical symptom score is 3.38 while Doc Dreamy's average is 2.8. Doc Dreamy performs better since lower scores indicate better outcomes. One might ask if the difference in average post-surgical symptom score is statistically significant. A two-sample t-test reveals a statistically significant difference (t = -2.317, p = 0.023). 
 
 ### Challenge Task 1: Recover Figure 1 — Post-Surgical Outcomes by Patient
 

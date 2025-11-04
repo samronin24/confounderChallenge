@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="index_files/libs/clipboard/clipboard.min.js"></script>
@@ -117,69 +97,11 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>📋 The Challenge: Recover the Lost Figures!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A critical report on confounding and causal inference was being prepared when disaster struck—the figures were lost! The data files survived (<code>patients_data.csv</code> and <code>patients_data_randomized.csv</code>), and the narrative text is intact, but <strong>all three key visualizations have disappeared</strong>.</p>
-<p>Your mission: <strong>Recover the lost figures</strong> by reading the narrative carefully and creating compelling visualizations that match the story being told. The figures must be:</p>
-<ul>
-<li><strong>Figure 1</strong>: Post-surgical outcomes by patient (observational data)</li>
-<li><strong>Figure 2</strong>: Post-surgical outcomes for randomized patients<br>
-</li>
-<li><strong>Figure 3</strong>: Post-surgical outcomes by patient severity (stratification)</li>
-</ul>
-<p>Use the text descriptions, statistical results, and your understanding of visualization best practices to recreate these figures. Your figures should be professional, colorblind-friendly, and tell the story clearly.</p>
-<p><strong>Grading:</strong> Completing the three figures correctly will earn you 85% of the grade. To earn the final 15% (for a total of 100%), you must make it feel like a complete, professional report rather than a challenge assignment</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>⚠️ AI Partnership Required
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use Cursor AI for speed, but ensure you understand and can explain your visualizations in your own words. The goal is to create figures that match the narrative and statistical insights described in the text.</p>
-</div>
-</div>
-<section id="the-paradox-who-really-is-the-better-surgeon" class="level2">
-<h2 class="anchored" data-anchor-id="the-paradox-who-really-is-the-better-surgeon">The Paradox: Who <em>Really</em> Is the Better Surgeon?</h2>
-<div class="callout callout-style-default callout-tip no-icon callout-titled" title="A Tale of Two Surgeons">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>A Tale of Two Surgeons
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><em>Paraphrased from</em> <span class="citation" data-cites="taleb2017surgeons">(<a href="#ref-taleb2017surgeons" role="doc-biblioref">Taleb 2017</a>)</span></p>
-<div style="float: right; margin-left: 15px; margin-bottom: 10px;">
-<p><img src="docSideBySide.jpg" alt="Doc Dreamy and Doc Duck side by side" style="max-width: 250px; height: auto; border-radius: 5px;"></p>
-</div>
-<p>Imagine you need to choose between two surgeons of similar rank at the same hospital. The first surgeon, Doc Dreamy, matches our stereotype perfectly: refined appearance, silver-rimmed glasses, delicate hands, measured speech, and an office adorned with Ivy League diplomas (see the image). The second surgeon, Doc Duck, by contrast, looks more like a butcher—overweight, with large hands, an unkempt appearance, and no visible credentials on the wall.</p>
-<p>Counterintuitively, the surgeon who doesn’t “look the part” may actually be the better choice. Why? Because when someone succeeds in their profession despite not fitting the expected appearance, it suggests they had to overcome significant perceptual biases. And if we are lucky enough to have people who do not look the part, it is thanks to the presence of some skin in the game, the contact with reality that filters out incompetence. <span class="citation" data-cites="taleb2017surgeons">(<a href="#ref-taleb2017surgeons" role="doc-biblioref">Taleb 2017</a>)</span></p>
-</div>
-</div>
-</section>
-<section id="observational-data-a-misleading-victory-for-doc-dreamy" class="level2">
-<h2 class="anchored" data-anchor-id="observational-data-a-misleading-victory-for-doc-dreamy">Observational Data: A Misleading Victory for Doc Dreamy</h2>
 <div id="cell-load-data-python" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of patients: 100</code></pre>
 </div>
-<div id="load-data-python" class="cell-output cell-output-display" data-execution_count="2">
+<div id="load-data-python" class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
 
@@ -241,7 +163,6 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>Let’s use data to figure out which surgeon performs better. <a href="#fig-plot-outcomes" class="quarto-xref">Figure&nbsp;1</a> shows the post-surgical symptom score for 100 patients. Doc Duck’s average post-surgical symptom score is 3.38 while Doc Dreamy’s average is 2.8. Doc Dreamy performs better since lower scores indicate better outcomes. One might ask if the difference in average post-surgical symptom score is statistically significant. A two-sample t-test reveals a statistically significant difference (t = -2.317, p = 0.023).</p>
 <section id="challenge-task-1-recover-figure-1-post-surgical-outcomes-by-patient" class="level3">
 <h3 class="anchored" data-anchor-id="challenge-task-1-recover-figure-1-post-surgical-outcomes-by-patient">Challenge Task 1: Recover Figure 1 — Post-Surgical Outcomes by Patient</h3>
 <p><strong>Your task:</strong> Create a scatter plot showing post-surgical symptom scores by patient number, with different markers/colors for each doctor. The figure should include:</p>
@@ -269,7 +190,6 @@ Figure&nbsp;1: Post-Surgical Symptom Score (lower is better) - Observed Data
 </div>
 </div>
 </div>
-</section>
 </section>
 <section id="the-hidden-confounder-patient-severity-explains-it-all" class="level2">
 <h2 class="anchored" data-anchor-id="the-hidden-confounder-patient-severity-explains-it-all">The Hidden Confounder: Patient Severity Explains It All</h2>
@@ -315,7 +235,7 @@ Figure&nbsp;3: DAG Model Explaining Surgical Outcomes
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of randomized patients: 100</code></pre>
 </div>
-<div id="load-data-randomized-python" class="cell-output cell-output-display" data-execution_count="5">
+<div id="load-data-randomized-python" class="cell-output cell-output-display" data-execution_count="12">
 <div>
 
 
@@ -461,14 +381,9 @@ Figure&nbsp;5: Post-Surgical Symptom Score (lower is better) by Patient and Seve
 <li>Test with both R and Python code chunks if you want to show versatility</li>
 <li>Set random seeds if you’re doing any additional analysis for reproducibility</li>
 </ul>
-
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-taleb2017surgeons" class="csl-entry" role="listitem">
-Taleb, Nassim Nicholas. 2017. <span>“Surgeons Should Not Look Like Surgeons.”</span> <a href="https://medium.com/incerto/surgeons-should-notlook-like-surgeons-23b0e2cf6d52">https://medium.com/incerto/surgeons-should-notlook-like-surgeons-23b0e2cf6d52</a>.
-</div>
-</div></section></div></main>
+</main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
